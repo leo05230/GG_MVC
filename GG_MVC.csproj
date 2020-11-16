@@ -143,6 +143,7 @@
     <Content Include="Scripts\jquery-3.4.1.min.js" />
     <Content Include="Scripts\jquery-3.4.1.slim.js" />
     <Content Include="Scripts\jquery-3.4.1.slim.min.js" />
+    <Content Include="Scripts\jquery-ui\formatYear.js" />
     <Content Include="Scripts\jquery-ui\ui\.DS_Store" />
     <Content Include="Scripts\jquery-ui\ui\.jshintrc" />
     <None Include="Scripts\jquery.validate-vsdoc.js" />

@@ -8,7 +8,7 @@ namespace GG_MVC.Controllers
 {
     public class UploadController : Controller
     {
-        public ActionResult Index(HttpPostedFileBase[] file)
+        public ActionResult Index(HttpPostedFileBase file)
         {
             List<Emp> csEmp = new List<Emp>()
             {

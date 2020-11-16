@@ -1,0 +1,38 @@
+﻿@model IEnumerable<GG_MVC.Controllers.Emp>
+@{
+	ViewBag.Title = "Index";
+}
+<input type="date" />
+@using (Html.BeginForm("Index", "Upload", FormMethod.Post, new { enctype = "multipart/form-data" ,id = "form1"}))
+{
+	<input type="hidden" value="" id="postrid" name="postid"/>
+	<h2>Index</h2>
+	<table>
+		<tr>
+			<th>編號</th>
+			<th>姓名</th>
+			<th>上傳</th>
+		</tr>
+		@foreach (var item in Model)
+		{
+			<tr>
+				<td>@item.nIndexNo</td>
+				<td>@item.strName</td>
+				@if (item.bUpload)
+				{
+					<td>有上傳</td>
+				}
+				else
+				{
+					<td><input type="file" name="file" class="btn btn-info" value="上傳" onchange="UpLoad(@item.nIndexNo)"/></td>
+				}
+			</tr>
+		}
+	</table>
+}
+<script>
+	function UpLoad(n) {
+		$("#postrid").val(n);
+		$("#form1").submit();
+	}
+</script>
